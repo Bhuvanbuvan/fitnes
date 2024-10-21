@@ -2,7 +2,6 @@ import 'package:fitnes/models/category_item_models.dart';
 import 'package:fitnes/models/dite_model.dart';
 import 'package:fitnes/models/popular_dite_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Home extends StatefulWidget {
@@ -75,7 +74,7 @@ class _HomeState extends State<Home> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
+                          SizedBox(
                             width: 65,
                             height: 65,
                             child:
@@ -94,11 +93,7 @@ class _HomeState extends State<Home> {
                                 ),
                               ),
                               Text(
-                                popularDites[index].level +
-                                    '|' +
-                                    popularDites[index].duration +
-                                    '|' +
-                                    popularDites[index].calorie,
+                                "${popularDites[index].level} | ${popularDites[index].duration} | ${popularDites[index].calorie}",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w400,
@@ -151,7 +146,7 @@ class _HomeState extends State<Home> {
         SizedBox(
           height: 40,
         ),
-        Container(
+        SizedBox(
           height: 250,
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
@@ -167,7 +162,7 @@ class _HomeState extends State<Home> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Container(
+                        SizedBox(
                           height: 100,
                           width: 100,
                           child: SvgPicture.asset(dites[index].iconPath),
@@ -180,11 +175,7 @@ class _HomeState extends State<Home> {
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          dites[index].level +
-                              '|' +
-                              dites[index].duration +
-                              '|' +
-                              dites[index].calorie,
+                          "${dites[index].level} | ${dites[index].duration} | ${dites[index].calorie}",
                           style: TextStyle(
                               color: Colors.black,
                               fontSize: 14,
@@ -197,7 +188,7 @@ class _HomeState extends State<Home> {
                             gradient: LinearGradient(
                               colors: [
                                 dites[index].viewIsSelected
-                                    ? Color(0xff9DceEFF)
+                                    ? Color.fromARGB(237, 220, 238, 255)
                                     : Colors.transparent,
                                 dites[index].viewIsSelected
                                     ? Color(0xff92A3FD)

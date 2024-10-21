@@ -17,28 +17,28 @@ class CategoryItemModels {
       CategoryItemModels(
         itemText: "Pancake",
         itemIcon: "assets/images/pancakes.svg",
-        itemColor: Colors.pink.shade50,
+        itemColor: Colors.pink,
       ),
     );
     category.add(
       CategoryItemModels(
         itemText: "Pie",
         itemIcon: "assets/images/pie.svg",
-        itemColor: Colors.green.shade50,
+        itemColor: Colors.green,
       ),
     );
     category.add(
       CategoryItemModels(
-        itemText: "Orange Snacks",
+        itemText: "Orange",
         itemIcon: "assets/images/orange-snacks.svg",
-        itemColor: Colors.pink.shade50,
+        itemColor: Colors.pink,
       ),
     );
     category.add(
       CategoryItemModels(
         itemText: "Plate",
         itemIcon: "assets/images/plate.svg",
-        itemColor: Colors.pink.shade50,
+        itemColor: Colors.blue,
       ),
     );
     return category;
